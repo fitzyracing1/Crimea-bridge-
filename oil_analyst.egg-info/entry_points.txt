@@ -1,0 +1,2 @@
+[console_scripts]
+oil-analyst = oil_analyst.cli:main
