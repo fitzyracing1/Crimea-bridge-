@@ -21,6 +21,11 @@ from .graph import build_graph, render_png, graph_to_node_link
 from .search_log import SearchLogger
 from .pipeline import DifferencePipeline, PipelineResult
 
+# The pairs betting layer lives in `difference_engine.markets`. It is not
+# re-exported here so that `python -m difference_engine.markets` can run as a
+# clean entry point (importing it here would double-import the module). Use
+# `from difference_engine.markets import make_market, PaperBook, ...`.
+
 __all__ = [
     "Config",
     "DataRecord",
