@@ -1,0 +1,5 @@
+requests>=2.31
+numpy>=1.24
+networkx>=3.0
+# Optional: only needed to render PNG graph images. The pipeline runs without it.
+matplotlib>=3.6
