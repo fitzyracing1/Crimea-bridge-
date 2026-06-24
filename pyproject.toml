@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oil-analyst"
+version = "0.1.0"
+description = "Analyst/trading bot for exchange-traded oil benchmarks: signals, backtesting, and paper/brokerage execution"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.26",
+    "yfinance>=0.2.40",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+oil-analyst = "oil_analyst.cli:main"
+
+[tool.setuptools]
+packages = ["oil_analyst"]
